@@ -88,13 +88,19 @@
       <!-- About Card -->
       <div class="card p-6 rounded-2xl flex-1 animate__animated" id="about">
         <h2 class="text-2xl font-semibold mb-2">About Meeee</h2>
-        <img src="https://picsum.photos/400/200" alt="About" class="rounded-lg mb-3">
-        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam viverra orci et lorem consequat posuere.</p>
+        <div class="flex flex-col md:flex-row gap-8">
+          <img src="https://picsum.photos/400/200" alt="About" class="rounded-lg mb-3">
+          <ul class="list-disc text-sm space-y-4">
+            <li>Graduated from BCIT CST Diploma</li>
+            <li>Experienced in designing web applications</li>
+            <li>Skilled in various programming paradims</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Avatar Card -->
       <div class="card relative p-6 rounded-2xl w-full md:w-1/3 min-w-25px flex flex-col items-center justify-center animate__animated z-10" id="avatar">
-        <div class="absolute inset-0 bg-white/50 z-0"></div>
+        <div class="absolute inset-0 bg-white/50 z-0 rounded-2xl"></div>
         <p class="font-semibold opacity-100 z-10">Aarsh :)</p>
         <span class="text-2xl mt-2 opacity-100 z-10">👍</span>
       </div>
@@ -103,7 +109,7 @@
     <!-- Row 2 -->
     <div class="flex flex-col md:flex-row gap-6">
       <!-- Gradient Card -->
-      <div class="card p-6 rounded-2xl flex-1 animate__animated" id="gradient">
+      <div class="card p-6 rounded-2xl flex-1 animate__animated bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" id="gradient">
         <h2 class="text-xl font-semibold mb-2">Figure out Gradient</h2>
         <p class="text-sm">Experimenting with Tailwind gradients and cool color transitions.</p>
       </div>
