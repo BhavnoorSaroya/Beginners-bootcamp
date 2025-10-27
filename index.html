@@ -1,75 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>@Sherryninja</title>
+
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Animate.css CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
   <!-- ScrollReveal CDN -->
   <script src="https://unpkg.com/scrollreveal"></script>
-  <style>
-    /* ===== DARK MODE TOGGLE ===== */
-    :root {
-      --bg: #ffffff;
-      --text: #1f2937;
-      --card: #f3f4f6;
-    }
-    [data-theme="dark"] {
-      --bg: #111827;
-      --text: #f9fafb;
-      --card: #1f2937;
-    }
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      transition: background-color 0.4s, color 0.4s;
-    }
-    .card {
-      background-color: var(--card);
-      transition: background-color 0.4s;
-    }
-    /* Toggle Button */
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      cursor: pointer;
-      width: 40px;
-      height: 40px;
-      border-radius: 9999px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--card);
-      transition: all 0.3s ease;
-    }
-    .theme-toggle:hover {
-      transform: scale(1.1);
-    }
-    /* Bouncing arrow */
-    .bounce {
-      animation: bounce 2s infinite;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    /* Avatar card */
-    #avatar {
-      background-image: url('https://picsum.photos/200');
-      background-size: cover;
-    }
-  </style>
-</head>
-<body class="font-sans">
 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-sans">
   <!-- Dark Mode Toggle -->
-  <div id="themeToggle" class="theme-toggle text-xl">
-    🌙
-  </div>
+  <div id="themeToggle" class="theme-toggle text-xl">🌙</div>
 
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center text-center px-4">
@@ -82,7 +36,6 @@
 
   <!-- Content Section -->
   <section class="px-6 pb-20 space-y-6 max-w-6xl mx-auto">
-
     <!-- Row 1 -->
     <div class="flex flex-col md:flex-row gap-6">
       <!-- About Card -->
@@ -93,7 +46,7 @@
           <ul class="list-disc text-sm space-y-4">
             <li>Graduated from BCIT CST Diploma</li>
             <li>Experienced in designing web applications</li>
-            <li>Skilled in various programming paradims</li>
+            <li>Skilled in various programming paradigms</li>
           </ul>
         </div>
       </div>
@@ -117,42 +70,24 @@
       <!-- Resume Card -->
       <div class="card p-6 rounded-2xl flex-1 animate__animated" id="resume">
         <h2 class="text-xl font-semibold mb-2">Download Resume</h2>
-        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-3">Download</button>
+        <a href="/resume.pdf" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-3 button inline-block ">
+          Download
+        </a>
       </div>
 
       <!-- Projects Card -->
       <div class="card p-6 rounded-2xl flex-1 animate__animated" id="projects">
         <h2 class="text-xl font-semibold mb-2">Projects</h2>
         <ul class="list-disc pl-6 text-sm space-y-1">
-          <li>#projects</li>
-          <li>SPA smoothscroll</li>
-          <li>HTPHacks Project</li>
+          <li><a href="https://github.com/Sherryninja10" target="_blank">My portfolio(github)</a></li>
+          <li>HTTPHacks Project</li>
           <li>1800 Project</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Dark Mode Script -->
-  <script>
-    const toggle = document.getElementById('themeToggle');
-    toggle.addEventListener('click', () => {
-      const theme = document.documentElement.getAttribute('data-theme');
-      if (theme === 'dark') {
-        document.documentElement.removeAttribute('data-theme');
-        toggle.textContent = '🌙';
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        toggle.textContent = '☀️';
-      }
-    });
-
-    // ScrollReveal Animations
-    ScrollReveal().reveal('#about', { duration: 1200, origin: 'left', distance: '50px' });
-    ScrollReveal().reveal('#avatar', { duration: 1200, origin: 'right', distance: '50px' });
-    ScrollReveal().reveal('#gradient', { duration: 1200, origin: 'left', distance: '50px' });
-    ScrollReveal().reveal('#resume', { duration: 1200, origin: 'bottom', distance: '50px' });
-    ScrollReveal().reveal('#projects', { duration: 1200, origin: 'right', distance: '50px' });
-  </script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+/* ===== THEME VARIABLES ===== */
+:root {
+  --bg: #ffffff;
+  --text: #1f2937;
+  --card: #f3f4f6;
+}
+
+[data-theme="dark"] {
+  --bg: #111827;
+  --text: #f9fafb;
+  --card: #1f2937;
+}
+
+/* ===== GLOBAL ===== */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.card {
+  background-color: var(--card);
+  transition: background-color 0.4s;
+}
+
+/* ===== THEME TOGGLE BUTTON ===== */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ===== BOUNCING ARROW ===== */
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===== AVATAR CARD ===== */
+#avatar {
+  background-image: url('https://picsum.photos/200');
+  background-size: cover;
+}
